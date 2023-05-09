@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    max-width: 960px;
+    /* min-width: 960px; */
+    margin: auto;
+}
+
+.matrix-container {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.matrix {
+    display: grid;
+}
+
+@media (max-width: 767px) {
+    .matrix {
+        max-width: none;
+
+    }
+
+    .matrix .cell:nth-child(-n+2),
+    .matrix .cell:nth-last-child(-n+2) {
+        display: none; /* Skrytí prvního a posledního sloupce */
+    }
+}
+
+.row {
+    display: flex;
+    flex-basis: 11.1%;
+}
+
+.cell {
+    box-sizing: border-box;
+    margin: 0.8em;
+    line-height: 5em;
+    height: 5em;
+    width: 5em;
+    background-color: #ff0099;
+    border-radius: 50%;
+    display: inline-block;
+    filter: drop-shadow(0 0 0.1rem #ff0099);
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cell::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.cell-player {
+    box-sizing: border-box;
+    margin: 0.8em;
+    line-height: 5em;
+    height: 5em;
+    width: 5em;
+    filter: drop-shadow(0 0 0.5rem #b418b1);
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ee7752, #ff0099, #b418b1, #2becf3);
+    background-size: 800% 800%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
