@@ -66,23 +66,27 @@ body {
 
 .cell {
     box-sizing: border-box;
-    margin: 0.8em;
-    line-height: 5em;
-    height: 5em;
-    width: 5em;
+    margin: 2vw;
+    /*line-height: 5em;*/
+    /*height: 5em;*/
+    aspect-ratio: 1/ 1;
+    width: 50%;
     background-color: #ff0099;
     border-radius: 50%;
-    display: inline-block;
     filter: drop-shadow(0 0 0.1rem #ff0099);
     color: #fff;
     text-align: center;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 200%;
 }
 
-.cell::first-letter {
+/*.cell::first-letter {
     font-size: 3em;
     font-weight: bold;
-}
+}*/
 
 .cell-player {
     box-sizing: border-box;
